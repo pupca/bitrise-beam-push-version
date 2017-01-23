@@ -1,0 +1,70 @@
+title: "Release notes grabber"
+summary: Release notes grabber
+description: Release notes grabber
+host_os_tags:
+  - osx-10.10
+project_type_tags:
+  - ios
+  - android
+  - xamarin
+type_tags:
+  - script
+is_requires_admin_user: false
+is_always_run: false
+is_skippable: true
+run_if: ""
+inputs:
+  - release_notes_url: Release notes URL
+    opts:
+      title: "Release notes URL"
+      is_expand: true
+      is_required: true
+      value_options: []
+  - build_file_path: Build File Path
+    opts:
+      title: "Build File Path"
+      is_expand: true
+      is_required: true
+      value_options: []
+  - info_plist_file_path: Info.plist file path
+    opts:
+      title: "Info.plist file path"
+      is_expand: true
+      is_required: true
+      value_options: []
+  - hockey_url: Hockey URL
+    opts:
+      title: "Hockey URL"
+      is_expand: true
+      is_required: true
+      value_options: []
+  - version: Version
+    opts:
+      title: "Version"
+      is_expand: true
+      is_required: true
+      value_options: []
+  - build_url: Build Url
+    opts:
+      title: "Build URL"
+      is_expand: true
+      is_required: true
+      value_options: []
+  - enviroment: Enviroment
+    opts:
+      title: "Enviroment"
+      is_expand: true
+      is_required: true
+      value_options: []  
+  - api_key: Api Key
+    opts:
+      title: "Api Key"
+      is_expand: true
+      is_required: true
+      value_options: []
+  - api_url: Api Url
+    opts:
+      title: "Api URL"
+      is_expand: true
+      is_required: true
+      value_options: []                                              

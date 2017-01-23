@@ -1,0 +1,22 @@
+format_version: 1.3.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - git::https://github.com/pupca/bitrise-unix-epoch-time.git@master:      
+    - path::./:
+        title: Bitrise Beam Push Version
+        run_if: true
+        inputs:
+        - release_notes_url: "http://app.beam.ai/changelog.txt"
+        - build_file_path: "/var/folders/nq/mx509bjd37546m565w0t8snr0000gn/T/deploy160225202/Beta.app.zip"
+        - info_plist_file_path: "/source/osx/Resources/Info.plist"
+        - hockey_url: "https://rink.hockeyapp.net/apps/83ff64d7e454421a945773390c75c7d8"
+        - version: "$UNIX_EPOCH_TIME"
+        - build_url: "https://beamai.s3.amazonaws.com/builds/beta/${UNIX_EPOCH_TIME}/Beam.zip"
+        - enviroment: "dev"
+        - api_key: "beamFTW"
+        - api_url: "http://localhost:5001/update_version"
+
+
